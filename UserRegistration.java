@@ -29,4 +29,17 @@ public class UserRegistration {
         return lastName;
     }
 
+    public static String validEmail(String email){
+
+        String Email ="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
+        boolean matchFind = email.matches(Email);
+        if (matchFind){
+            System.out.println("match found");
+        }
+        else {
+            System.out.println("match not found");
+        }
+        return email;
+    }
+
 }
