@@ -2,11 +2,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-    static String firstName;
-    UserRegistration(String firstName){
-        this.firstName = firstName;
-    }
-    public static String validFirstName() {
+
+    public static String validFirstName(String firstName) {
         String P = "^[A-Z][a-z]{3,30}$";
         Pattern p3 = Pattern.compile(P);
         Matcher m3 = p3.matcher(firstName);
@@ -17,6 +14,19 @@ public class UserRegistration {
             System.out.println("Match not found");
         }
         return firstName;
+    }
+
+    public static String validLastName(String lastName) {
+        String Q = "^[A-Z][a-z]{3,30}$";
+        Pattern Q1 = Pattern.compile(Q);
+        Matcher m4 = Q1.matcher(lastName);
+        boolean Q3 = m4.matches();
+        if (Q3) {
+            System.out.println("match found");
+        } else {
+            System.out.println("match not found");
+        }
+        return lastName;
     }
 
 }
