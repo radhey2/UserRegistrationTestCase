@@ -42,4 +42,20 @@ public class UserRegistration {
         return email;
     }
 
+    public static String validPhoneNum(String phoneNo){
+
+        String p = "^[0-9]{2}\\s{0,1}[0-9]{10}$";
+        Pattern p3 = Pattern.compile(p);
+        Matcher m3 = p3.matcher(phoneNo);
+        boolean r3 = m3.matches();
+        if (r3){
+            System.out.println("Match found");
+        }
+        else {
+            System.out.println("Match not Found");
+        }
+        return phoneNo;
+    }
+
+
 }
